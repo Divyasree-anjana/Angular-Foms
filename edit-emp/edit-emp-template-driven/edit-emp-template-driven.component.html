@@ -1,0 +1,113 @@
+<!--<div class="container-fluid">
+    <h4>Edit Employee</h4>
+    <form #empForm="ngForm">
+    <div class="form-group">
+            <label>Name</label>
+            <input type="text" required #name="ngModel" minlength="2" maxlength="10" class="form-control" name="userName" 
+    [(ngModel)]="emp.name" [class.is-invalid]="name.invalid && name.touched" >
+    <div *ngIf="name.errors && (name.invalid || name.touched)">
+        <small class="text-danger" *ngIf="name.errors.required">Name field is required</small>      
+        <small class="text-danger" *ngIf="name.errors.minlength">Name must at least have 2 characters</small>      
+        <small class="text-danger" *ngIf="name.errors.maxlength">Name can have a maximum of 10 characters</small>      
+        {{name.value}}
+    </div>
+    </div>
+    </form>
+ 
+            <div>name.invalid - {{name.invalid}}</div>
+            <div>name.touched - {{name.touched}}</div>
+            <div>name.dirty - {{name.dirty}}</div>
+            <div>name.errors.required - {{name.errors?.required}}</div>
+            <div>name.errors.minlength - {{name.errors?.minlength| json}}</div>
+    
+</div>-->
+
+
+<!--<div class="block">
+    <h4>Edit Employee</h4>
+ <form #empForm="ngForm">
+    <div class="form-group" (ngSubmit)="onSubmit()" novalidate>
+            <label>Name</label>
+            <input type="text" required #name="ngModel" minlength="2" maxlength="10" class="form-control" name="userName" 
+       [(ngModel)]="emp.name" [class.is-invalid]="name.invalid && name.touched" >
+      <div *ngIf="name.errors && (name.invalid || name.touched)">
+          <small class="text-danger" *ngIf="name.errors.required">Name field is required</small>      
+          <small class="text-danger" *ngIf="name.errors.minlength">Name must at least have 2 characters</small>      
+          <small class="text-danger" *ngIf="name.errors.maxlength">Name can have a maximum of 10 characters</small>      
+          {{name.value}}
+      </div>
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input type="number" required #name="ngModel" minlength="2" maxlength="10" class="form-control" name="Salary" [(ngModel)]="emp.salary">
+    </div>
+    <div class="mb-3">
+        <label>Is Permanent or not</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="permanent" value="true" [(ngModel)]="emp.permanent">
+            <label class="form-check-label">yes</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="permanent" value="false" [(ngModel)]="emp.permanent">
+            <label class="form-check-label">no</label>
+        </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="empForm.form.invalid" type="submit">Save</button>
+ </form> 
+</div>
+<div class="block">
+    <strong>Employee Model</strong><br>
+    <pre>{{emp | json }}</pre>
+</div>
+<div class="block">
+    <strong>Angular Generated Form Model</strong><br>
+    <pre>{{empForm.value | json}}</pre>
+</div>-->     
+
+<div class="block">
+    <h4>Edit Employee</h4>
+ <form #empForm="ngForm">
+    <div class="form-group" (ngSubmit)="onSubmit()" novalidate>
+            <label>Name</label>
+            <input type="text" required #name="ngModel" minlength="2" maxlength="10" class="form-control" name="userName" 
+       [(ngModel)]="emp.name" [class.is-invalid]="name.invalid && name.touched" >
+      <div *ngIf="name.errors && (name.invalid || name.touched)">
+          <small class="text-danger" *ngIf="name.errors.required">Name field is required</small>      
+          <small class="text-danger" *ngIf="name.errors.minlength">Name must at least have 2 characters</small>      
+          <small class="text-danger" *ngIf="name.errors.maxlength">Name can have a maximum of 10 characters</small>      
+          {{name.value}}
+      </div>
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input type="number" required #name="ngModel" minlength="2" maxlength="10" class="form-control" name="Salary" [(ngModel)]="emp.salary">
+    </div>
+    <div class="mb-3">
+        <label>Is Permanent or not</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="permanent" value="true" [(ngModel)]="emp.permanent">
+            <label class="form-check-label">yes</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="permanent" value="false" [(ngModel)]="emp.permanent">
+            <label class="form-check-label">no</label>
+        </div>
+    </div>
+  <!--<div class="form-group">
+        <select class="custom-select" name="department" [(ngModel)]="emp.department.name">
+            <option selected>Department</option>
+            <option *ngFor="let department of departments">{{department}}</option>
+        </select>
+    </div>-->
+    <button class="btn btn-primary" [disabled]="empForm.form.invalid" type="submit">Save</button>
+ </form> 
+</div>
+<div class="block">
+    <strong>Employee Model</strong><br>
+    <pre>{{emp | json }}</pre>
+</div>
+<div class="block">
+    <strong>Angular Generated Form Model</strong><br>
+    <pre>{{empForm.value | json}}</pre>
+</div>
+
